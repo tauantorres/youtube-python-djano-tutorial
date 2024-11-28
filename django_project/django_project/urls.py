@@ -21,6 +21,9 @@ from django.urls import path, include
 
 from users import views as users_views
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 urlpatterns = [
     # Default URL:
@@ -39,3 +42,8 @@ urlpatterns = [
     path(route='login/', view=auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     path(route='logout/', view=auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
 ]
+
+
+if settings.DEBUG:
+    urlpatterns += static(prefix=settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

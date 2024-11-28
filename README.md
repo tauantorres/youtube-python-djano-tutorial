@@ -2,6 +2,8 @@
  
 Python Tutorial for [Django Developers](https://www.youtube.com/watch?v=UmljXZIypDc&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=1&ab_channel=CoreySchafer)
 
+Extra courses in [LearnDjango](https://learndjango.com/courses/)
+
 ## Installation:
 ```bash
 pip install django
@@ -102,4 +104,12 @@ from blog.models import User
 from django.contrib.auth.models import User
 from blog.models import Post
 
+```
+
+
+Every time you make changes to the models, you need to run the following commands:
+
+```bash
+python django_project/manage.py makemigrations
+python django_project/manage.py migrate
 ```

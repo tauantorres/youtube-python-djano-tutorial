@@ -4,6 +4,10 @@ body {
   margin-top: 5rem;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 h1, h2, h3, h4, h5, h6 {
   color: #444444;
 }
@@ -23,16 +27,11 @@ a {
 .site-header .navbar-nav .nav-link {
   color: #cbd5db;
 }
-  
-.site-header .navbar-nav .nav-link {
-    color: #cbd5db;
-}
 
 .site-header .navbar-nav .nav-link:hover {
-    color: #ffffff;
+  color: #ffffff;
 }
 
-  
 .content-section {
   background: #ffffff;
   padding: 10px 20px;
@@ -40,30 +39,31 @@ a {
   border-radius: 3px;
   margin-bottom: 20px;
 }
-  
+
 .article-title {
   color: #444444;
 }
-  
+
 a.article-title:hover {
   color: #428bca;
   text-decoration: none;
 }
-  
+
 .article-content {
   white-space: pre-line;
 }
-  
+
 .article-img {
-  height: 65px;
   width: 65px;
-  margin-right: 16px;
+  height: 65px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .article-metadata {
   padding-bottom: 1px;
   margin-bottom: 4px;
-  border-bottom: 1px solid #e3e3e3
+  border-bottom: 1px solid #e3e3e3;
 }
 
 .article-metadata a:hover {
@@ -89,13 +89,75 @@ a.article-title:hover {
 }
 
 .navbar-nav .nav-item {
-  display: inline-flex; /* Ensures proper inline alignment */
-  align-items: center; /* Vertically centers the content */
-  margin: 0; /* Removes any unintended margins */
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
 }
 
 .navbar-nav .btn-link {
-  text-decoration: none; /* Matches the look of 'a' tags */
-  padding: 0; /* Removes unnecessary padding */
-  margin: 0; /* Ensures alignment */
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+
+.media {
+  display: grid; /* Use CSS Grid for layout */
+  grid-template-columns: 1fr 3fr; /* Define the column proportions: 1/4 for the image, 3/4 for the content */
+  gap: 16px; /* Adds space between the columns */
+  background: #ffffff; /* Add a background color to the media box */
+  border: 1px solid #dddddd; /* Add a border to the box */
+  border-radius: 3px; /* Slightly round the corners */
+  padding: 10px; /* Add padding inside the media box */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.media-image {
+  display: flex; /* Use flexbox to center the image within the column */
+  justify-content: center;
+  align-items: center;
+}
+
+.media-image img {
+  max-width: 65px; /* Set a maximum width for the image */
+  max-height: 65px; /* Set a maximum height for the image */
+  border-radius: 50%; /* Make the image rounded */
+  object-fit: cover; /* Ensure the image fits nicely without distortion */
+}
+
+.media-body {
+  display: block; /* Ensure content is block-level and spans the entire available space */
+  text-align: left; /* Align content to the left */
+}
+
+/* .media-body {
+  display: grid; 
+  grid-template-rows: auto auto 1fr; 
+  gap: 8px; 
+} */
+
+/* .media {
+  display: flex; 
+  align-items: flex-start; 
+}
+
+.media-image {
+  flex-shrink: 0; 
+  margin-right: 16px; 
+}
+
+.media-image img {
+  width: 65px; 
+  height: 65px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+}
+
+.media-body {
+  flex-grow: 1; 
+} */
+
+
+.text-secondary {
+  font-size: 1rem;
+  color: #6c757d;
 }
