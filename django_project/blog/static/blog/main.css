@@ -87,3 +87,15 @@ a.article-title:hover {
 .account-heading {
   font-size: 2.5rem;
 }
+
+.navbar-nav .nav-item {
+  display: inline-flex; /* Ensures proper inline alignment */
+  align-items: center; /* Vertically centers the content */
+  margin: 0; /* Removes any unintended margins */
+}
+
+.navbar-nav .btn-link {
+  text-decoration: none; /* Matches the look of 'a' tags */
+  padding: 0; /* Removes unnecessary padding */
+  margin: 0; /* Ensures alignment */
+}
